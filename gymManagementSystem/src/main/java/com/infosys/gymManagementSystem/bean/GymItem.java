@@ -1,9 +1,8 @@
 package com.infosys.gymManagementSystem.bean;
 
 import javax.persistence.Entity;
+
 import javax.persistence.Id;
-
-
 
 
 @Entity
@@ -15,6 +14,12 @@ public class GymItem {
 	public GymItem() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	public GymItem(Item item) {
+		super();
+		this.itemId = item.getItemId();
+		this.itemName = item.getItemName();
+		this.totalSeat = item.getTotalSeat();
 	}
 	public GymItem(Long itemId, String itemName, Integer seat) {
 		super();
@@ -40,10 +45,5 @@ public class GymItem {
 	public void setTotalSeat(Integer totalSeat) {
 		this.totalSeat = totalSeat;
 	}
-	
-	
-	
-	
-	
 	
 }

@@ -237,7 +237,7 @@ function validateForm() {
       <button type="submit">Submit</button>
       <button type="reset">Reset</button>
     </div>
-    <span align="center">Already registered? <a href="@{/login}"><p id ="id9">Login here</p></a></span>
+    <span align="center">Already registered? <a href="{/login}"><p id ="id9">Login here</p></a></span>
 </form:form>
 </div>
 </body>

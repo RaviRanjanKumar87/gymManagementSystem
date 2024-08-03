@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>All Items</title>
+<title>Insert title here</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -17,7 +17,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-image: url("https://wallpapercave.com/wp/wp2356258.jpg");
+        background-image: url("/images/gymReport.jpg");
     	background-repeat: no-repeat;
   		background-attachment: fixed; 
   		background-size: 100% 100%;
@@ -62,28 +62,48 @@
     a:hover {
         text-decoration: underline;
     }
+       .return {
+    padding: 0px 8px;
+    background-color: #00b4ff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    }
+    .return:hover{
+    background-color: #2f8db4;
+    }
 </style>
 </head>
 <body>
   <div class="container">
-    <h1><u><i>All SLOTS</i></u></h1>
+    <h1><u><i>All BOOKING</i></u></h1>
     <table>
       <tr>
-        <th>Slot Number</th>
-        <th>Slot Time</th>
-        <th>Pricing</th>
-        <th>Enquire</th>
+        <th>BOOKING</th>
+        <th>USER</th>
+        <th>SLOT NO</th>
+        <th>ITEM NO</th>
+        
       </tr>
-      <c:forEach items="${slotList}" var="slot">
+      <c:forEach items="${bookList}" var="book">
         <tr>
-          <td>${slot.slotId}</td>
-          <td>${slot.slotTime}</td>
-          <td>${slot.pricing}</td>
-          <td><a href="/slot-book/${slot.slotId}">Book Slot & Item</a></td>
+          
+          <td>${book.bookingId}</td>
+          <td>${book.username}</td>
+          <td>${book.slotId}</td>
+          <td>${book.itemId}</td>
+          <td><a href="/cancel-booking/${book.bookingId}">Cancel Booking</a></td>
+          
+         
         </tr>
       </c:forEach>
     </table>
-    <a href="/index">Return</a>
-  </div>
+    <a href="/index" class="return">Return</a>
+  </div>>
+
 </body>
 </html>

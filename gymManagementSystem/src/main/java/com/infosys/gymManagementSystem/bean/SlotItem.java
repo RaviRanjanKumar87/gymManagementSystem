@@ -8,8 +8,10 @@ import javax.persistence.Entity;
 @Entity
 public class SlotItem {
 	@EmbeddedId
- 	private SlotItemEmbed embeddedId;
+	private SlotItemEmbed embeddedId;
 	private Integer seatBooked;
+	
+	
 	public SlotItem() {
 		super();
 		seatBooked=0;
@@ -17,25 +19,36 @@ public class SlotItem {
 	}
 	public SlotItem(SlotItemEmbed embeddedId) {
 		super();
-		this.embeddedId = embeddedId;
-		this.seatBooked = 0;
+		this.embeddedId=embeddedId;
+		this.seatBooked=0;
 	}
-	public SlotItem(SlotItemEmbed embeddedId, Integer seatBooked) {
+
+
+	public SlotItem(SlotItemEmbed embeddedId, Integer seatAvailable) {
 		super();
 		this.embeddedId = embeddedId;
-		this.seatBooked = seatBooked;
+		this.seatBooked = seatAvailable;
 	}
+
+
 	public SlotItemEmbed getEmbeddedId() {
 		return embeddedId;
 	}
+
+
 	public void setEmbeddedId(SlotItemEmbed embeddedId) {
 		this.embeddedId = embeddedId;
 	}
+
+
 	public Integer getSeatBooked() {
 		return seatBooked;
 	}
+
+
 	public void setSeatBooked(Integer seatBooked) {
 		this.seatBooked = seatBooked;
 	}
+	
 	
 }

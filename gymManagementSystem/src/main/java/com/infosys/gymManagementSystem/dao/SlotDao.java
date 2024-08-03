@@ -3,6 +3,7 @@ package com.infosys.gymManagementSystem.dao;
 import java.util.List;
 
 
+
 import com.infosys.gymManagementSystem.bean.Slot;
 
 public interface SlotDao {

@@ -3,6 +3,7 @@ package com.infosys.gymManagementSystem.dao;
 import java.util.List;
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ public class GymItemDaoImpl implements GymItemDao {
 	@Autowired
 	private GymItemsRepository repository;
 	@Override
-	public void saveNewItem(GymItem gymItem) {
+	public void save(GymItem gymItem) {
 		// TODO Auto-generated method stub
 		repository.save(gymItem);
 	}
@@ -26,7 +27,7 @@ public class GymItemDaoImpl implements GymItemDao {
 		return repository.findAll();
 	}
 	@Override
-	public GymItem findItemsById(Long id) {
+	public GymItem findItemById(Long id) {
 		// TODO Auto-generated method stub
 		 return repository.findById(id).get();
 	}
@@ -41,7 +42,10 @@ public class GymItemDaoImpl implements GymItemDao {
 		
 		return val;
 	}
-	
+	@Override
+	public Integer findTotalSeatById (Long id) {
+		return repository.findTotalSeatById(id);
+	}
 	
 
 }

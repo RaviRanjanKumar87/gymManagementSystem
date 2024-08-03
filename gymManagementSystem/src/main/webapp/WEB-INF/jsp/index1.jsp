@@ -154,12 +154,7 @@
         
     </div>
      <div class="subnav">
-        
-        
-            <a href="/adminBookingDeatils">BOOKING DETAILS</a>
-           
-       
-        
+            <a href="/admin-booking-detail">BOOKING DETAILS</a>
     </div>
     <a href="#contact">Contact</a>
     <div class="navbar-right">
